@@ -1,0 +1,10 @@
+---
+- name: "App {{ app_name }} deploy"
+  hosts: "server_for_ruby_app"
+  become: true
+  vars_files:
+    - defaults/main.yml
+  roles:
+    - geerlingguy.nginx
+    - postgres
+    - app

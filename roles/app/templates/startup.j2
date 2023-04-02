@@ -1,0 +1,10 @@
+#!/bin/bash
+SECRET_KEY_BASE=secret \
+RAILS_ENV= {{ rails_env }} \
+RAILS_LOG_TO_STDOUT=1 \
+DB_HOST= {{ db_host }} \
+DB_PORT= {{ db_port }} \
+DB_NAME= {{ db_name  }} \
+DB_USER= {{ db_user  }} \
+DB_PASSWORD= {{ db_password  }} \
+scl enable rh-ruby26 -- bundle exec puma -b unix:///var/run/puma.sock -e {{ rails_env }} config.ru

@@ -1,0 +1,12 @@
+app_name: "rubyApp"
+service_user: "nginx"
+service_group: "nginx"
+rails_env: "production"
+rails_log_to_stdout: 1
+db_host: "127.0.0.1"
+db_port: 5432
+db_name: "{{ app_name }}_prod"
+db_user: "{{ app_name }}_dbuser"
+db_password: ""
+git_user: ""
+git_password: ""
